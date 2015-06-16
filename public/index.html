@@ -39,6 +39,19 @@
         console.log(response);
       });
 
+      FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          console.log('Logged in.');
+        }
+        else {
+          FB.login();
+        }
+      });
+
+
+
+
+      
     </script>
 <!--
   Below we include the Login Button social plugin. This button uses
